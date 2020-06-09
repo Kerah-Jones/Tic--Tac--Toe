@@ -12,10 +12,10 @@ the user is inputting information about a book.
 First, your `<input>`s will need to be wrapped in a `<form>`, like this:
 
 ```html
-<form id="create-book">
-  <input name="book[title]" type="text">
-  <input name="book[author]" type="text">
-  <button type="submit">Create Book</button>
+<form>
+  <input name="credentials[email]" type="text" value="an@example.email">
+  <input name="credentials[password]" type="password" value="an example password">
+  <input name="credentials[password_confirmation]" type="password" value="an example password">
 </form>
 ```
 Then, in your Javascript, you'd do something like this:
