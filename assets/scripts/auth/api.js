@@ -47,7 +47,7 @@ const changePasswordIndex = function (data) {
     method: 'PATCH',
     url: config.apiUrl + '/change-password',
     headers: {
-      Authorization: 'Taken token=' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     },
     data: {
       passwords: {
@@ -57,19 +57,6 @@ const changePasswordIndex = function (data) {
     }
   })
 }
-
-// Game api functions
-
-const newGameIndex = function (gamedata) {
-  return $.ajax({
-    method: 'POST',
-    url: config.apiUrl + '/new-game',
-    headers: {
-      Authorization: 'Taken token=' + store.user.token
-    }
-  })
-}
-
 // const newGameIndex2 = function (gamedata) {
 //   const apiCall = {
 //     method: 'POST',
@@ -90,6 +77,5 @@ module.exports = {
   signUpIndex,
   signInIndex,
   changePasswordIndex,
-  signOutIndex,
-  newGameIndex
+  signOutIndex
 }

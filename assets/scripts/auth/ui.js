@@ -21,6 +21,7 @@ const signInSuccess = function (responseSignIn) {
   $('#message2').addClass('success')
   $('form').trigger('reset')
   store.user = responseSignIn.user
+  console.log(responseSignIn)
 }
 // send failure message for sign in failure
 const signInFailure = function (responseSignIn) {
@@ -59,15 +60,6 @@ const signOutFailure = function (responseSignOut) {
   $('#message4').addClass('failure')
   console.error('signOut Error is :', responseSignOut)
 }
-
-const newGameIndex = function (responseNewGame) {
-  $('#message5').text('New Game Started!')
-  $('#message5').removeClass()
-  $('#message5').addClass('success')
-  console.log("Let's Play!")
-  store.game = responseNewGame.game
-}
-
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -76,6 +68,5 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure,
-  newGameIndex
+  signOutFailure
 }

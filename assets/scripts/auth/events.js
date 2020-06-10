@@ -62,25 +62,10 @@ const onChangePassword = function (event) {
     .catch(ui.chagePasswordFailure)
 }
 
-// Game event functions
-const onNewGame = function (game) {
-  event.preventDefault()
-  console.log('start game ran')
-
-  // collect data from api
-  const form = event.target
-  const data = getFormFields(form)
-  api.newGameIndex(data)
-
-  // connect event functions to the ui messages for New Game
-    .then(ui.newGameSuccess)
-    .catch(ui.newGameFailure)
-}
-
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut,
-  onNewGame
+  onSignOut
+
 }

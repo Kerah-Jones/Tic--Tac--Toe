@@ -1,1 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
+td {
+  border: 2px solid black;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+}
+
+td:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.endgame {
+  display: none;
+}
