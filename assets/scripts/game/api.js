@@ -24,28 +24,28 @@ const getGamesIndex = function (gameData) {
   })
 }
 
-const updateGameIndex = function (gameData) {
-  console.log(gameData)
-  return $.ajax({
-    method: 'PATCH',
-    url: config.apiUrl + '/games/' + store.game._id,
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-      data:{
-        game: {
-          cell: {
-            index: 0,
-            value: "x"
-          },
-      over: false
-      }
-    }
-  })
-}
+// const updateGameIndex = function (gameData) {
+//   console.log(gameData)
+//   return $.ajax({
+//     method: 'PATCH',
+//     url: config.apiUrl + '/games/' + store.game._id,
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data:{
+//       game: {
+//         cell: {
+//           index: 0,
+//           value: "x"
+//         },
+//         over: false
+//       }
+//     }
+//   })
+// }
 
 module.exports = {
   newGameIndex,
   getGamesIndex
-  updateGameIndex
+  // updateGameIndex
 }
