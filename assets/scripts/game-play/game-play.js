@@ -37,10 +37,5 @@ function turnClick(square) {
 }
 
 module.exports= {
-  resetBoard,
-  cells,
-  replayGame,
-  user,
-  computer,
-  wins
+
 }

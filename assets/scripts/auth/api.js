@@ -57,21 +57,6 @@ const changePasswordIndex = function (data) {
     }
   })
 }
-// const newGameIndex2 = function (gamedata) {
-//   const apiCall = {
-//     method: 'POST',
-//     url: config.apiUrl + '/new-game',
-//     data: {
-//       credentials: {
-//         email: gamedata.credentials.password,
-//         password: gamedata.credentials.password
-//       }
-//     }
-//   }
-//   console.log(config.apiUrl)
-//   console.log(apiCall)
-//   return $.ajax(apiCall)
-// }
 
 module.exports = {
   signUpIndex,
