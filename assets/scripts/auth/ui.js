@@ -7,11 +7,13 @@ const signUpSuccess = function (responseSignUp) {
   // reset when sign in sucessful
   $('#message').text('Sign Up Successful')
   $('form').trigger('reset')
+  $('#message').css('color', 'green')
 }
 // message sign up unsucessful when requirements arent met
 const signUpFailure = function (responseSignUp) {
   $('#message').text('Sign Up Failed')
   $('form').trigger('reset')
+  $('#message').css('color', 'red')
 }
 
 // send message of sign in Successful
@@ -20,6 +22,10 @@ const signInSuccess = function (responseSignIn) {
   $('#message2').removeClass()
   $('#message2').addClass('success')
   $('form').trigger('reset')
+  $('#sign-out').show()
+  $('#change-password').show()
+  $('#new-game').show()
+  $('#message2').css('color', 'green')
   store.user = responseSignIn.user
   console.log(responseSignIn)
 }
@@ -27,6 +33,7 @@ const signInSuccess = function (responseSignIn) {
 const signInFailure = function (responseSignIn) {
   $('#message2').text('Sign In Failure')
   $('form').trigger('reset')
+  $('#message2').css('color', 'red')
 }
 
 // send message when password is changed
@@ -35,6 +42,7 @@ const changePasswordSuccess = function (responseChangePassword) {
   $('form').trigger('reset')
   $('#message3').removeClass()
   $('#message3').addClass('success')
+  $('#message3').css('color', 'green')
 }
 
 // send message when password fails to update
@@ -43,13 +51,19 @@ const changePasswordFailure = function (responseChangePassword) {
   $('form').trigger('reset')
   $('#message3').removeClass()
   $('#message3').addClass('failure')
+  $('#message3').css('color', 'red')
 }
 
 const signOutSuccess = function (responseSignOut) {
   $('#message4').text('You Are Signed out!')
   $('#message4').removeClass()
   $('#message4').addClass('success')
+  $('#message4').css('color', 'green')
   $('form').trigger('reset')
+  $('#change-password').hide()
+  $('#new-game').hide()
+  $('#board-game').hide()
+  $('#sign-out').hide()
   console.log('Sign Out Successful!')
   store.user = null
 }
@@ -58,6 +72,7 @@ const signOutFailure = function (responseSignOut) {
   $('#message4').text('Error on sign out')
   $('#message4').removeClass()
   $('#message4').addClass('failure')
+  $('#message4').css('color', 'red')
   console.error('signOut Error is :', responseSignOut)
 }
 module.exports = {

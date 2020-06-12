@@ -16,4 +16,8 @@ $(() => {
   $('#new-game').on('submit', gameEvents.onNewGame)
   // $('#update-game').on('submit', gameEvents.onShowGame)
   $('#get-games').on('submit', gameEvents.onGetGame)
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#new-game').hide()
+  $('#board-game').hide()
 })

@@ -2,15 +2,33 @@
 td {
   border: 2px solid black;
   height: 100px;
-  text-align: center;
   width: 100px;
 }
 
+#board-game {
+  margin-left: 215px;
+}
+
+button {
+  background-color: #b6eb7a;
+}
+button:hover {
+  background-color: #bbf1c8;
+}
+
+h2 {
+  color: #fb7813;
+}
+
 td:hover {
-  background-color: yellow;
+  background-color: #fb7813;
   cursor: pointer;
 }
 
-.endgame {
-  display: none;
+h1{
+  color: #17706e;
+}
+body{
+  background-color:#f7f7ee;
+  text-align: center;
 }
