@@ -60,10 +60,12 @@ const signOutSuccess = function (responseSignOut) {
   $('#message4').addClass('success')
   $('#message4').css('color', 'green')
   $('form').trigger('reset')
+  $('#sign-up').show()
+  $('#sign-in').show()
   $('#change-password').hide()
   $('#new-game').hide()
   $('#board-game').hide()
-  $('#sign-out').hide()
+  $('#sign-out').show()
   console.log('Sign Out Successful!')
   store.user = null
 }
