@@ -45,8 +45,39 @@ const onGetGame = function (game) {
 //     .catch(ui.showGameFailure)
 // }
 
+const player1 = 'X'
+const player2 = 'O'
+
+let currentTurn = 1
+const movesMade = 0
+
+const winnerContainer = $('.winner')
+const reset = $('.reset')
+const sqr = $('.square')
+
+const onMakeMove = function (game) {
+  event.preventDefault()
+  console.log('square clicked')
+
+  if (currentTurn % 2 === 1) {
+    event.target.innerHTML = player1
+    event.target.style.color = "red"
+    currentTurn++
+  } else {
+    event.target.innerHTML = player2
+    event.target.style.color = "green"
+    currentTurn--
+  }
+}
+//   if (checkForWinner()) {
+//     theWinner = currentTurn == 1 ? player2 : player1
+//     declareWinner(theWinner)
+//   }
+// }
+
 module.exports = {
   onNewGame,
-  onGetGame
+  onGetGame,
+  onMakeMove
   // onShowGame
 }

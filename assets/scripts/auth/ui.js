@@ -8,6 +8,7 @@ const signUpSuccess = function (responseSignUp) {
   $('#message').text('Sign Up Successful')
   $('form').trigger('reset')
   $('#message').css('color', 'green')
+  $('#message').show('Sign Up Successful')
 }
 // message sign up unsucessful when requirements arent met
 const signUpFailure = function (responseSignUp) {
@@ -21,6 +22,7 @@ const signInSuccess = function (responseSignIn) {
   $('#message2').text('Sign In Successful')
   $('#message2').removeClass()
   $('#message2').addClass('success')
+  $('#message4').hide('You Are Signed out!')
   $('form').trigger('reset')
   $('#sign-out').show()
   $('#change-password').show()
@@ -65,7 +67,10 @@ const signOutSuccess = function (responseSignOut) {
   $('#change-password').hide()
   $('#new-game').hide()
   $('#board-game').hide()
-  $('#sign-out').show()
+  $('#sign-out').hide()
+  $('#message').hide('Sign Up Successful')
+  $('#message2').hide('Sign In Successful')
+  $('#message4').show('You Are Signed out!')
   console.log('Sign Out Successful!')
   store.user = null
 }

@@ -20,11 +20,6 @@ h2 {
   color: #fb7813;
 }
 
-td:hover {
-  background-color: #fb7813;
-  cursor: pointer;
-}
-
 h1{
   color: #17706e;
 }
@@ -32,4 +27,42 @@ h1{
 body{
   background-color:#f7f7ee;
   text-align: center;
+}
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.board-container {
+    height: 100%;
+    width: 100%;
+}
+
+.board {
+    width: 619px;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    /* add below this second */
+    border: 3px solid black;
+    font-size: 56px;
+}
+
+.square:hover {
+    background: #fb7813;
+    cursor: pointer;
 }
