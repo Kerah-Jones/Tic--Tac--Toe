@@ -34,7 +34,7 @@
 
         <form id="sign-out">
         <p id="message4"></p>
-          <input type="submit" value="Sign out!">
+          <button type="submit">Sign out</button>
         </form>
 
       <form id="change-password">
@@ -51,36 +51,29 @@
       <p id="message5"></p>
         <button type="submit">Start Game</button>
     </form>
-<script src="game-play.js"></script>
 
     <div id="board-game">
 
-      <div class='flex-container flex-center'>
-                 <div class='winner'></div>
-             </div>
-             <div class="board flex-container flex-wrap ">
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-                 <div class="square flex-container flex-center"></div>
-             </div>
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+  </div>
 
-
-<p id="end-game-message"></p>
-  <div class="endgame">
-    </div>
-    <button onClick="replayGame()">Reset Game</button>
-
+<div class="winning-message" id="winningMessage">
+    <div data-winning-message-text></div>
+    <button id="restartButton">Play Again!</button>
+</div>
     <p id="message6"></p>
     <form id="get-games">
       <button type="submit">Get Games!</button>
     </form>
 </div>
-
     </body>
 </html>

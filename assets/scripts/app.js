@@ -20,5 +20,4 @@ $(() => {
   $('#change-password').hide()
   $('#new-game').hide()
   $('#board-game').hide()
-  $('.square').on('click', gameEvents.onMakeMove)
 })

@@ -16,6 +16,7 @@ const newGameSuccess = function (responseNewGame) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   store.game = responseNewGame.game
+  store.game.currentTurn= 'x'
 }
 const newGameFailure = function (responseNewGame) {
   $('#message5').text('New Game failed to start')
@@ -35,6 +36,11 @@ const getGameFailure = function (responseNewGame) {
   console.log('Failure to show games!')
 }
 // get games functions
+const getGameSuccess = function (responseShowGame) {
+  $('#message6').text('Showing previous games')
+  $('#message6').css('color', 'green')
+  console.log('show games working')
+}
 const getGameSuccess = function (responseShowGame) {
   $('#message6').text('Showing previous games')
   $('#message6').css('color', 'green')

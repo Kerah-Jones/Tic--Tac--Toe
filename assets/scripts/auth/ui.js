@@ -71,6 +71,8 @@ const signOutSuccess = function (responseSignOut) {
   $('#message').hide('Sign Up Successful')
   $('#message2').hide('Sign In Successful')
   $('#message4').show('You Are Signed out!')
+  $('#message5').hide('New Game Started!')
+  $('#message6').hide('Showing previous games')
   console.log('Sign Out Successful!')
   store.user = null
 }

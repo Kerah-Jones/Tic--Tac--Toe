@@ -59,7 +59,7 @@ const onChangePassword = function (event) {
 
   // connect events funtions to ui messages for change password
     .then(ui.changePasswordSuccess)
-    .catch(ui.chagePasswordFailure)
+    .catch(ui.changePasswordFailure)
 }
 
 module.exports = {
