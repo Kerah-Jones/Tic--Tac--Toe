@@ -32,17 +32,17 @@ const onGetGame = function (game) {
     .catch(ui.getGameFailure)
 }
 
-// // show game function
-const onShowGame = function (game) {
+// // // update game function
+const onUpdateGame = function (game) {
   event.preventDefault()
-  console.log('show games')
+  console.log('update games')
 
   const form = event.target
   const data = getFormFields(form)
-  api.showGameIndex(data)
+  api.updateGameIndex(data)
 
-    .then(ui.showGameSuccess)
-    .catch(ui.showGameFailure)
+    .then(ui.updateGameSuccess)
+    // .catch(ui.updateGameFailure)
 }
 
 // play game code
@@ -137,12 +137,6 @@ function checkWin (currentClass) {
   })
 }
 
-//   if (checkForWinner()) {
-//     theWinner = currentTurn == 1 ? player2 : player1
-//     declareWinner(theWinner)
-//   }
-// }
-
 module.exports = {
   onNewGame,
   onGetGame,
@@ -150,6 +144,6 @@ module.exports = {
   board,
   winningMessageElement,
   restartButton,
-  winningMessageTextElement
-  onShowGame
+  winningMessageTextElement,
+  onUpdateGame
 }

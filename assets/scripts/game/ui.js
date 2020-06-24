@@ -1,6 +1,7 @@
 
 // export the store file
 const store = require('./../store')
+const data = require('./events')
 
 // create games functions
 const newGameSuccess = function (responseNewGame) {
@@ -16,7 +17,7 @@ const newGameSuccess = function (responseNewGame) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   store.game = responseNewGame.game
-  store.game.currentTurn= 'x'
+  store.game.currentTurn = 'x'
 }
 const newGameFailure = function (responseNewGame) {
   $('#message5').text('New Game failed to start')
@@ -36,14 +37,15 @@ const getGameFailure = function (responseNewGame) {
   console.log('Failure to show games!')
 }
 // get games functions
-const getGameSuccess = function (responseShowGame) {
+const getGameSuccess = function (responseNewGame) {
   $('#message6').text('Showing previous games')
   $('#message6').css('color', 'green')
   console.log('show games working')
 }
-const getGameSuccess = function (responseShowGame) {
-  $('#message6').text('Showing previous games')
-  $('#message6').css('color', 'green')
+const updateGameSuccess = function (responseNewGame) {
+  $('#message7').text('You have played')
+  // + data.game.newGameIndex)
+  $('#message7').css('color', 'green')
   console.log('show games working')
 }
 
@@ -51,6 +53,7 @@ module.exports = {
   newGameSuccess,
   newGameFailure,
   getGameSuccess,
-  getGameFailure
+  getGameFailure,
+  updateGameSuccess
 
 }

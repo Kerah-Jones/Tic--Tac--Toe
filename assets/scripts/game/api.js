@@ -25,10 +25,10 @@ const getGamesIndex = function (gameData) {
 }
 
 const updateGameIndex = function (cellIndex, cellValue, over) {
-  console.log(gameData)
+  console.log(cellIndex, cellValue, over)
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/games/' + store.game._id,
+    url: config.apiUrl + '/games' + store.game._id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
