@@ -109,7 +109,7 @@ function endGame (draw) {
     winningMessageTextElement.innerText = `${circleTurn ? 'O' : 'X'} Wins!`
   }
   winningMessageElement.classList.add('show')
-}
+  }
 
 function isDraw () {
   return [...cellElements].every(cell => {
@@ -138,7 +138,6 @@ function setBoardHoverClass () {
 function turnSelectorMessage () {
   if (circleTurn) {
     turnMessageTextElement.innerText = `${circleTurn ? 'O' : 'X'} turn!`
-  }else{}
   } else {
     turnMessageTextElement.classList.add('show')
   }
