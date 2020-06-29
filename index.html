@@ -50,9 +50,14 @@
       <h2>Let's Play</h2>
       <p id="message5"></p>
         <button type="submit">Start Game</button>
-    </form>
+    </form id="count-games">
+
+    <div class="turn-message" id="turnMessage">
+      <div turn-selector></div>
+     </div>
 
     <div id="board-game">
+
 
     <div class="board" id="board">
       <div class="cell" data-cell></div>
@@ -66,11 +71,14 @@
       <div class="cell" data-cell></div>
   </div>
 
-<p id=message7></p>
+<form id="count-games">
 <div class="winning-message" id="winningMessage">
     <div data-winning-message-text></div>
     <button id="restartButton">Play Again!</button>
+    <p id=message7></p>
 </div>
+</form>
+
     <p id="message6"></p>
     <form id="get-games">
       <button type="submit">Get Games!</button>

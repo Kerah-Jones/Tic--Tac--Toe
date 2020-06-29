@@ -45,6 +45,8 @@ const onUpdateGame = function (game) {
     // .catch(ui.updateGameFailure)
 }
 
+
+
 // play game code
 
 const X_CLASS = 'x'
@@ -64,7 +66,10 @@ const board = document.getElementById('board')
 const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
+const turnSelectorElement = document.querySelector('turnMessage')
+const turnMessageTextElement = document.querySelector('[turn-selector]')
 let circleTurn
+let xTurn
 
 startGame()
 
@@ -93,6 +98,7 @@ function handleClick (e) {
   } else {
     swapTurns()
     setBoardHoverClass()
+    turnSelectorMessage()
   }
 }
 
@@ -129,6 +135,15 @@ function setBoardHoverClass () {
   }
 }
 
+function turnSelectorMessage () {
+  if (circleTurn) {
+    turnMessageTextElement.innerText = `${circleTurn ? 'O' : 'X'} turn!`
+  }else{}
+  } else {
+    turnMessageTextElement.classList.add('show')
+  }
+}
+
 function checkWin (currentClass) {
   return WINNING_COMBINATIONS.some(combination => {
     return combination.every(index => {
@@ -145,5 +160,7 @@ module.exports = {
   winningMessageElement,
   restartButton,
   winningMessageTextElement,
-  onUpdateGame
+  onUpdateGame,
+  turnSelectorElement,
+  turnMessageTextElement
 }
